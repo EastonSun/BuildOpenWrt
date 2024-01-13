@@ -137,5 +137,8 @@ git clone --depth=1 -b master https://github.com/kenzok8/small.git
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/model/cbi/v2ray_server/*.lua
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/view/v2ray_server/*.htm
 
+# 修复acl错误
+rm -rf staging_dir
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
