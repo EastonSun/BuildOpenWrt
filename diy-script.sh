@@ -8,9 +8,9 @@ sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_genera
 	# 参数1是分支名, 参数2是子目录, 参数3是目标目录, 参数4仓库地址
 	# trap 'rm -rf "$TMP_DIR"' 0 1 2 3
 	# TMP_DIR="$(mktemp -d)" || exit 1
- # ORI_DIR="$PWD"
+ 	# ORI_DIR="$PWD"
 	# [ -d "$3" ] || mkdir -p "$3"
-		# TGT_DIR="$(cd "$3"; pwd)"
+	# TGT_DIR="$(cd "$3"; pwd)"
 	# cd "$TMP_DIR" && \
 	# git init >/dev/null 2>&1 && \
 	# git remote add -f origin "$4" >/dev/null 2>&1 && \
