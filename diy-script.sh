@@ -10,7 +10,7 @@ sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_genera
 	# TMP_DIR="$(mktemp -d)" || exit 1
  # ORI_DIR="$PWD"
 	# [ -d "$3" ] || mkdir -p "$3"
-	# TGT_DIR="$(cd "$3"; pwd)"
+		# TGT_DIR="$(cd "$3"; pwd)"
 	# cd "$TMP_DIR" && \
 	# git init >/dev/null 2>&1 && \
 	# git remote add -f origin "$4" >/dev/null 2>&1 && \
