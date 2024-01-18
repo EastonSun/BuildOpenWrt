@@ -18,8 +18,8 @@ sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_genera
 	# cd "$2" && cp -a . "$TGT_DIR/" && cd "$ORI_DIR"
 # }
 # merge_package "master" "luci-app-openclash" "package/openwrt-packages/luci-app-openclash" "https://github.com/WYC-2020/openwrt-packages"
-git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages.git
-git clone --depth=1 -b master https://github.com/kenzok8/small.git
+git clone --depth=1 -b master https://github.com/dd0072/openwrt-packages.git package/openwrt-package
+git clone --depth=1 -b master https://github.com/dd0072/small.git package/small
 
 # 删除冲突的插件
 # rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb}
@@ -137,5 +137,5 @@ git clone --depth=1 -b master https://github.com/kenzok8/small.git
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/model/cbi/v2ray_server/*.lua
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/view/v2ray_server/*.htm
 
-# ./scripts/feeds update -a
-# ./scripts/feeds install -a
+./scripts/feeds update -a
+./scripts/feeds install -a
