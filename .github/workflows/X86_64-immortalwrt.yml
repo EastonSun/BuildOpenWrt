@@ -1,4 +1,4 @@
-name: X86_64 Immortalwrt
+name: X86_64 Immortalwrt_master
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ env:
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: Immortalwrt_X86_64
+  FIRMWARE_TAG: Immortalwrt_X86_64_master
   TZ: Asia/Shanghai
 
 jobs:
