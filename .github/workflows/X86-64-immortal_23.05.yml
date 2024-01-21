@@ -6,15 +6,15 @@ on:
     - cron: 0 2 8-14,22-28 * 5
 
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt.git
+  REPO_URL: https://git.openwrt.org/openwrt/openwrt.git
   REPO_BRANCH: openwrt-23.05
-  CONFIG_FILE: configs/x86_64-immortalwrt.config
+  CONFIG_FILE: configs/x86_64-openwrt.config
   DIY_SCRIPT: diy-script.sh
   CLASH_KERNEL: amd64
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: Immortalwrt_X86_64_23.05
+  FIRMWARE_TAG: Openwrt_X86_64_23.05
   TZ: Asia/Shanghai
 
 jobs:
