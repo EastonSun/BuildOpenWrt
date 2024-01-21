@@ -3,7 +3,7 @@ name: X86_64 QWRT
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 2 8-14,22-28 * 5
+    - cron: 0 0 8-14,22-28 * 5
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
