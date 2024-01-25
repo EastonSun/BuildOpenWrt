@@ -18,8 +18,8 @@ sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_genera
 	# cd "$2" && cp -a . "$TGT_DIR/" && cd "$ORI_DIR"
 # }
 # merge_package "master" "luci-app-openclash" "package/openwrt-packages/luci-app-openclash" "https://github.com/WYC-2020/openwrt-packages"
-git clone --depth=1 -b master https://github.com/dd0072/openwrt-packages.git package/openwrt-package
-git clone --depth=1 -b master https://github.com/dd0072/small.git package/small
+git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/openwrt-package
+git clone --depth=1 -b master https://github.com/kenzok8/small package/small
 
 # 删除冲突的插件
 # rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb}
