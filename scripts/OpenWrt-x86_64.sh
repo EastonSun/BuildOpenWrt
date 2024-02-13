@@ -34,7 +34,7 @@ curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turbo
 
 # 添加argon
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/argon
-git clone https://github.com/jerrykuku/luci-app-argon-config.git package/argon
+git clone https://github.com/jerrykuku/luci-app-argon-config.git package/argon-config
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
