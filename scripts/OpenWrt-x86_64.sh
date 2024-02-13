@@ -16,7 +16,7 @@ function git_sparse_clone() {
 # git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
 
 # 添加netdata
-git_sparse_clone master https://github.com/immortalwrt/packages/tree/master/admin netdata
+# git_sparse_clone master https://github.com/immortalwrt/packages/tree/master/admin netdata
 
 # 添加adguardhome
 git_sparse_clone master https://github.com/kenzok8/openwrt-packages adguardhome 
