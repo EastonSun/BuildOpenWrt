@@ -15,6 +15,9 @@ svn_export() {
 
 # svn_export "master" "target/linux/x86" "route" "https://github.com/coolsnowwolf/lede"
 
+# 添加netdata
+svn_export "master" "admin/netdata" "package" "https://github.com/immortalwrt/packages"
+
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
 
