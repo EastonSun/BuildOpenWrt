@@ -18,23 +18,11 @@ svn_export() {
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
 
-# git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/openwrt-package
-# git clone --depth=1 -b master https://github.com/kenzok8/small package/small
-
-# 添加MosDNS
-rm -rf feeds/packages/net/v2ray-geodata
-git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
-
-# 添加passwall
-git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
+git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/openwrt-package
+git clone --depth=1 -b master https://github.com/kenzok8/small package/small
 
 # 添加Turboacc
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
-
-# 添加argon
-git clone https://github.com/jerrykuku/luci-theme-argon.git package/argon
-git clone https://github.com/jerrykuku/luci-app-argon-config.git package/argon-config
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
