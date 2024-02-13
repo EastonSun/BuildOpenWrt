@@ -32,5 +32,9 @@ git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 # 添加Turboacc
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
+# 添加argon(原版不要添加)
+git clone https://github.com/jerrykuku/luci-theme-argon.git package
+git clone https://github.com/jerrykuku/luci-app-argon-config.git package
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
