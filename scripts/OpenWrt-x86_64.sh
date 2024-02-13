@@ -19,7 +19,8 @@ function git_sparse_clone() {
 git_sparse_clone master https://github.com/immortalwrt/packages admin/netdata
 
 # 添加adguardhome
-git_sparse_clone master https://github.com/kenzok8/openwrt-packages adguardhome
+git_sparse_clone master https://github.com/kenzok8/openwrt-packages adguardhome 
+git_sparse_clone master https://github.com/kenzok8/openwrt-packages luci-app-adguardhome
 
 # 添加passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
