@@ -30,5 +30,8 @@ git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 # 添加passwall
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 
+# 添加Turboacc
+curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
