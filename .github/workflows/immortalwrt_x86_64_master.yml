@@ -9,7 +9,7 @@ env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt.git
   REPO_BRANCH: master
   CONFIG_FILE: configs/x86_64-immortalwrt_master.config
-  DIY_SCRIPT: scripts/x86_64-immortalwrt.config
+  DIY_SCRIPT: scripts/x86_64-immortalwrt.sh
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
