@@ -16,10 +16,10 @@ function git_sparse_clone() {
 # git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
 
 # 添加netdata
-git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
+git_sparse_clone master https://github.com/immortalwrt/packages admin/netdata
 
 # 添加adguardhome
-git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+git_sparse_clone master https://github.com/kenzok8/openwrt-packages adguardhome
 
 # 添加passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
