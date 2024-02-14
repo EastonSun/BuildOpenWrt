@@ -16,7 +16,7 @@ function git_sparse_clone() {
 # git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
 
 # 添加autoupdate
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages autoupdate luci-app-autoupdate
+# git_sparse_clone master https://github.com/kiddin9/openwrt-packages autoupdate luci-app-autoupdate
 
 # 添加netdata
 git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-netdata
