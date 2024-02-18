@@ -43,6 +43,9 @@ git clone --depth=1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
+# 添加cloudflarespeedtest
+git clone --depth=1 https://github.com/dd0072/openwrt-cloudflarespeedtest.git package/cloudflarespeedtest
+
 # git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/openwrt-package
 # git clone --depth=1 -b master https://github.com/kenzok8/small package/small
 
