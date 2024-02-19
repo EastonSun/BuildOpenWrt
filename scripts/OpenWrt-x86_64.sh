@@ -19,7 +19,7 @@ function git_sparse_clone() {
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages autoupdate luci-app-autoupdate
 
 # 添加netdata
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-netdata
+git clone --depth=1 https://github.com/Jason6111/luci-app-netdata.git package/luci-app-netdata
 
 # 添加adguardhome
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages adguardhome luci-app-adguardhome
