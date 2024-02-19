@@ -44,7 +44,8 @@ git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-t
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 # 添加cloudflarespeedtest
-# git clone --depth=1 https://github.com/dd0072/openwrt-cloudflarespeedtest.git package/cloudflarespeedtest
+git clone --depth=1 https://github.com/immortalwrt-collections/openwrt-cdnspeedtest.git package/cdnspeedtest
+git clone --depth=1 https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest.git package/cloudflarespeedtest
 
 # git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/openwrt-package
 # git clone --depth=1 -b master https://github.com/kenzok8/small package/small
