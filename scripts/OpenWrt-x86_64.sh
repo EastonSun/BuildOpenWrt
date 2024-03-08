@@ -25,8 +25,8 @@ git clone --depth=1 https://github.com/Jason6111/luci-app-netdata.git package/lu
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages adguardhome luci-app-adguardhome
 
 # 添加passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
+# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
+# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 
 # 添加opcnclash
 # git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
@@ -54,5 +54,5 @@ git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/l
 git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/openwrt-package
 git clone --depth=1 -b master https://github.com/kenzok8/small package/small
 
-./scripts/feeds update -a
-./scripts/feeds install -a
+# ./scripts/feeds update -a
+# ./scripts/feeds install -a
