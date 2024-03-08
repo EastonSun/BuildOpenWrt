@@ -51,6 +51,7 @@ git clone --depth=1 https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest.g
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
+# 添加常用插件包
 git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/openwrt-package
 git clone --depth=1 -b master https://github.com/kenzok8/small package/small
 
