@@ -15,6 +15,10 @@ function git_sparse_clone() {
 
 # git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
 
+# 删除不需要的文件
+rm -rf feeds/packages/net/v2ray-geodata
+git clone --depth=1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+
 # 添加autoupdate
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages autoupdate luci-app-autoupdate
 
@@ -35,9 +39,7 @@ function git_sparse_clone() {
 # curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
 # 添加MosDNS
-# rm -rf feeds/packages/net/v2ray-geodata
 # git clone --depth=1 https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-# git clone --depth=1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # 添加argon
 # git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
