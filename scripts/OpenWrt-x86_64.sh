@@ -49,8 +49,12 @@ git clone --depth=1 https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest.g
 ./scripts/feeds install golang cdnspeedtest
 
 # 替换golang版本为1.22.x
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+# rm -rf feeds/packages/lang/golang
+# git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+
+# 使用golang 1.21编译xray-core & xray-plugin
+git apply xray-core/patches/010-go1.21.patch
+git apply xray-plugin/patches/010-go1.21.patch
 
 # 添加常用插件包
 git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/openwrt-package
