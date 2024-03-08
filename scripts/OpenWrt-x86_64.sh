@@ -19,7 +19,7 @@ function git_sparse_clone() {
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages autoupdate luci-app-autoupdate
 
 # 添加netdata
-git clone --depth=1 https://github.com/Jason6111/luci-app-netdata.git package/luci-app-netdata
+# git clone --depth=1 https://github.com/Jason6111/luci-app-netdata.git package/luci-app-netdata
 
 # 添加adguardhome
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages adguardhome luci-app-adguardhome
@@ -32,7 +32,7 @@ git clone --depth=1 https://github.com/Jason6111/luci-app-netdata.git package/lu
 # git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 
 # 添加Turboacc
-curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
+# curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
 # 添加MosDNS
 # rm -rf feeds/packages/net/v2ray-geodata
@@ -44,17 +44,12 @@ curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turbo
 # git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 # 添加cloudflarespeedtest
-git clone --depth=1 https://github.com/immortalwrt-collections/openwrt-cdnspeedtest.git package/cdnspeedtest
-git clone --depth=1 https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest.git package/cloudflarespeedtest
-./scripts/feeds install golang cdnspeedtest
+# git clone --depth=1 https://github.com/immortalwrt-collections/openwrt-cdnspeedtest.git package/cdnspeedtest
+# git clone --depth=1 https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest.git package/cloudflarespeedtest
 
 # 替换golang版本为1.22.x
-# rm -rf feeds/packages/lang/golang
-# git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
-
-# 使用golang 1.21编译xray-core & xray-plugin
-git apply xray-core/patches/010-go1.21.patch
-git apply xray-plugin/patches/010-go1.21.patch
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
 # 添加常用插件包
 git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/openwrt-package
