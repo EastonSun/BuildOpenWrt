@@ -46,6 +46,7 @@ curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turbo
 # 添加cloudflarespeedtest
 git clone --depth=1 https://github.com/immortalwrt-collections/openwrt-cdnspeedtest.git package/cdnspeedtest
 git clone --depth=1 https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest.git package/cloudflarespeedtest
+./scripts/feeds install golang cdnspeedtest
 
 # 替换golang版本为1.22.x
 rm -rf feeds/packages/lang/golang
