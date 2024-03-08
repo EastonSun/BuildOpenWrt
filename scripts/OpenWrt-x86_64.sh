@@ -35,13 +35,13 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-a
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
 # 添加MosDNS
-rm -rf feeds/packages/net/v2ray-geodata
-git clone --depth=1 https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-git clone --depth=1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+# rm -rf feeds/packages/net/v2ray-geodata
+# git clone --depth=1 https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+# git clone --depth=1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # 添加argon
-git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+# git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+# git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 # 添加cloudflarespeedtest
 git clone --depth=1 https://github.com/immortalwrt-collections/openwrt-cdnspeedtest.git package/cdnspeedtest
@@ -51,8 +51,8 @@ git clone --depth=1 https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest.g
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
-# git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/openwrt-package
-# git clone --depth=1 -b master https://github.com/kenzok8/small package/small
+git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/openwrt-package
+git clone --depth=1 -b master https://github.com/kenzok8/small package/small
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
