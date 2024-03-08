@@ -47,6 +47,10 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/l
 git clone --depth=1 https://github.com/immortalwrt-collections/openwrt-cdnspeedtest.git package/cdnspeedtest
 git clone --depth=1 https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest.git package/cloudflarespeedtest
 
+# 替换golang版本为1.22.x
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+
 # git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/openwrt-package
 # git clone --depth=1 -b master https://github.com/kenzok8/small package/small
 
