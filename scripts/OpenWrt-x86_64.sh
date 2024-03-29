@@ -37,7 +37,7 @@ git clone https://github.com/siwind/luci-app-vlmcsd.git package/luci-app-vlmcsd
 git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
 
 # 添加lucky
-git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
+# git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # 添加MosDNS
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
