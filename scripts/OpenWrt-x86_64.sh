@@ -44,8 +44,8 @@ git clone --depth=1 https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdn
 git clone --depth=1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # 替换golang版本为1.22.x
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+# rm -rf feeds/packages/lang/golang
+# git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
 # 添加常用插件包
 # git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/openwrt-package
