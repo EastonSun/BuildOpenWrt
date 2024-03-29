@@ -33,23 +33,23 @@ git clone https://github.com/siwind/openwrt-vlmcsd.git package/vlmcsd
 git clone https://github.com/siwind/luci-app-vlmcsd.git package/luci-app-vlmcsd
 
 # 添加passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 
 # 添加lucky
-git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
+git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # 添加MosDNS
-git clone --depth=1 https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-git clone --depth=1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # 替换golang版本为1.22.x
 # rm -rf feeds/packages/lang/golang
 # git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
 # 添加常用插件包
-# git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/openwrt-package
-# git clone --depth=1 -b master https://github.com/kenzok8/small package/small
+# git clone https://github.com/kenzok8/openwrt-packages package/openwrt-package
+# git clone master https://github.com/kenzok8/small package/small
 
 # ./scripts/feeds update -a
 # ./scripts/feeds install -a
