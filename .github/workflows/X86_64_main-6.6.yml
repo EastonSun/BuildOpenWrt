@@ -1,4 +1,4 @@
-name: X86_64 Openwrt_main
+name: X86_64 Openwrt_main_6.6
 
 on:
   workflow_dispatch:
