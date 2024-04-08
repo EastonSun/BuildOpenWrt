@@ -14,7 +14,7 @@ env:
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: Openwrt_X86_64_main_Kerne6.6
+  FIRMWARE_TAG: Openwrt_X86_64_main_Kernel6.6
   TZ: Asia/Shanghai
 
 jobs:
