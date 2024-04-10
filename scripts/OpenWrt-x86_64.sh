@@ -19,8 +19,9 @@ function git_sparse_clone() {
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages adguardhome luci-app-adguardhome
 
 # 删除不需要的文件
-rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
+# rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 rm -rf feeds/packages/lang/golang
+rm -rf feeds/packages/net/v2ray-geodata
 
 # 添加Turboacc
 # curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
@@ -33,8 +34,10 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/siwind/openwrt-vlmcsd.git package/vlmcsd
 git clone https://github.com/siwind/luci-app-vlmcsd.git package/luci-app-vlmcsd
 
-# 添加passwall & ssr-plus及依赖
-git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
+# 添加passwall及依赖
+# git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall-packages
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
 
 # 添加lucky
 # git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
