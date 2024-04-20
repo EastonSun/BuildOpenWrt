@@ -43,7 +43,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/ope
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
 
 # 添加lucky
-# git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
+git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # 添加MosDNS
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
