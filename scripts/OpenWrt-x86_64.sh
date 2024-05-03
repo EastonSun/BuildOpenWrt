@@ -53,9 +53,8 @@ git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 # git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # 添加SmartDNS
-# git clone https://github.com/pymumu/openwrt-smartdns.git package/smartdns
-# git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
-git_sparse_clone main https://github.com/kenzok8/small-package.git smartdns luci-app-smartdns
+git clone https://github.com/pymumu/openwrt-smartdns.git package/openwrt-smartdns
+git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 # 替换golang版本为1.22.x
 git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
