@@ -16,7 +16,7 @@ function git_sparse_clone() {
 # git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
 
 # 添加adguardhome
-# git_sparse_clone master https://github.com/kiddin9/openwrt-packages adguardhome luci-app-adguardhome
+git clon https://github.com/kongfl888/luci-app-adguardhome.git package/adguardhome
 
 # 添加ddns-go
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages ddns-go luci-app-ddns-go
