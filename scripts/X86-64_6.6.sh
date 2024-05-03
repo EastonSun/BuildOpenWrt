@@ -28,8 +28,8 @@ function git_sparse_clone() {
 # rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 rm -rf feeds/packages/lang/golang
 # rm -rf feeds/packages/net/v2ray-geodata
-rm -rf feeds/packages/net/smartdns
-rm -rf feeds/luci/luci-app-smartdns
+# rm -rf feeds/packages/net/smartdns
+# rm -rf feeds/luci/luci-app-smartdns
 
 # 添加Turboacc
 # curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
@@ -56,9 +56,8 @@ git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 # git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # 添加SmartDNS
-# git clone https://github.com/pymumu/openwrt-smartdns.git package/smartdns
-# git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
-git_sparse_clone main https://github.com/kenzok8/small-package.git smartdns luci-app-smartdns
+git clone https://github.com/pymumu/openwrt-smartdns.git package/openwrt-smartdns
+git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 # 替换golang版本为1.22.x
 git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
