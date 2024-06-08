@@ -22,9 +22,9 @@ function git_sparse_clone() {
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages ddns-go luci-app-ddns-go
 
 # 删除不需要的文件
-rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
+# rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 # rm -rf feeds/packages/lang/golang
-# rm -rf feeds/packages/net/v2ray-geodata
+rm -rf feeds/packages/net/v2ray-geodata
 # rm -rf feeds/packages/net/smartdns
 # rm -rf feeds/luci/applications/luci-app-smartdns
 
