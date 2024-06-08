@@ -22,11 +22,11 @@ function git_sparse_clone() {
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages ddns-go luci-app-ddns-go
 
 # 删除不需要的文件
-# rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
+rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 # rm -rf feeds/packages/lang/golang
 # rm -rf feeds/packages/net/v2ray-geodata
-rm -rf feeds/packages/net/smartdns
-rm -rf feeds/luci/applications/luci-app-smartdns
+# rm -rf feeds/packages/net/smartdns
+# rm -rf feeds/luci/applications/luci-app-smartdns
 
 # 添加Turboacc
 # curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
@@ -42,19 +42,19 @@ git clone https://github.com/siwind/luci-app-vlmcsd.git package/luci-app-vlmcsd
 # 添加passwall及依赖
 # git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall-packages
-# git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
-git clone -b luci-smartdns-dev --single-branch https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
+# git clone -b luci-smartdns-dev --single-branch https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
 
 # 添加lucky
 git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # 添加MosDNS
-# git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-# git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # 添加SmartDNS
-git clone https://github.com/pymumu/openwrt-smartdns.git feeds/packages/net/smartdns
-git clone https://github.com/pymumu/luci-app-smartdns.git feeds/luci/applications/luci-app-smartdns
+# git clone https://github.com/pymumu/openwrt-smartdns.git feeds/packages/net/smartdns
+# git clone https://github.com/pymumu/luci-app-smartdns.git feeds/luci/applications/luci-app-smartdns
 
 # 替换golang版本为1.22.x
 # git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
