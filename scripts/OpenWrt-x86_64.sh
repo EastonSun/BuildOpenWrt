@@ -42,8 +42,8 @@ git clone https://github.com/siwind/luci-app-vlmcsd.git package/luci-app-vlmcsd
 # 添加passwall及依赖
 # git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall-packages
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
-# git clone -b luci-smartdns-dev --single-branch https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
+# git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
+git clone -b luci-smartdns-dev --single-branch https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
 
 # 添加lucky
 git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
