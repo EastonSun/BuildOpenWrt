@@ -1,4 +1,4 @@
-name: X86_64 Openwrt_main
+name: X86_64 immortalwrt_master
 
 on:
   workflow_dispatch:
