@@ -53,7 +53,7 @@ git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # 添加SmartDNS
 git clone https://github.com/pymumu/openwrt-smartdns.git feeds/packages/net/smartdns
-git clone https://github.com/pymumu/luci-app-smartdns.git feeds/luci/applications/luci-app-smartdns
+git clone --branch lede https://github.com/pymumu/luci-app-smartdns.git feeds/luci/applications/luci-app-smartdns
 
 # 替换golang版本为1.22.x
 # git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
