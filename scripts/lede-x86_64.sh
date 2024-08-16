@@ -54,15 +54,15 @@ git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
 # git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # 添加SmartDNS
-git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns feeds/luci/applications/luci-app-smartdns
+git clone --depth=1 --branch lede https://github.com/pymumu/luci-app-smartdns feeds/luci/applications/luci-app-smartdns
 git clone --depth=1 https://github.com/pymumu/openwrt-smartdns /feeds/packages/net/smartdns
 
 # 替换golang版本为1.22.x
 # git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
 # 添加argon主题
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+git clone --depth=1 --branch 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone --depth=1 --branch 18.06 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 # 添加常用插件包
 # git clone https://github.com/kenzok8/openwrt-packages package/openwrt-package
