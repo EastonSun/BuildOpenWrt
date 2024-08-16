@@ -43,26 +43,26 @@ rm -rf feeds/luci/applications/luci-app-argon-config
 # git clone https://github.com/siwind/luci-app-vlmcsd.git package/luci-app-vlmcsd
 
 # 添加passwall及依赖
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall-packages
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall-packages
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
 
 # 添加lucky
-git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
+git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # 添加MosDNS
 # git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 # git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # 添加SmartDNS
-git clone --depth=1 --branch lede https://github.com/pymumu/luci-app-smartdns feeds/luci/applications/luci-app-smartdns
-git clone --depth=1 https://github.com/pymumu/openwrt-smartdns /feeds/packages/net/smartdns
+git clone -b lede https://github.com/pymumu/luci-app-smartdns feeds/luci/applications/luci-app-smartdns
+git clone https://github.com/pymumu/openwrt-smartdns /feeds/packages/net/smartdns
 
 # 替换golang版本为1.22.x
 # git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
 # 添加argon主题
-git clone --depth=1 --branch 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone --depth=1 --branch 18.06 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 # 添加常用插件包
 # git clone https://github.com/kenzok8/openwrt-packages package/openwrt-package
