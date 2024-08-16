@@ -68,5 +68,5 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config package/lu
 # git clone https://github.com/kenzok8/openwrt-packages package/openwrt-package
 # git clone master https://github.com/kenzok8/small package/small
 
-./scripts/feeds update -a
-./scripts/feeds install -a
+# ./scripts/feeds update -a
+# ./scripts/feeds install -a
