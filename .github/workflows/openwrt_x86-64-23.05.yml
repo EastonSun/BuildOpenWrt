@@ -3,7 +3,7 @@ name: X86_64 openwrt_23.05
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 2 * * 5
+    - cron: 0 4 * * 5
 
 env:
   REPO_URL: https://git.openwrt.org/openwrt/openwrt.git
