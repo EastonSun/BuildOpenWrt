@@ -22,8 +22,8 @@ function git_sparse_clone() {
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages ddns-go luci-app-ddns-go
 
 # 删除不需要的文件
-find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
-find ./ | grep Makefile | grep mosdns | xargs rm -f
+# find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
+# find ./ | grep Makefile | grep mosdns | xargs rm -f
 # rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 # rm -rf feeds/packages/lang/golang
 # rm -rf feeds/packages/net/v2ray-geodata
@@ -52,8 +52,8 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-pass
 git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # 添加MosDNS
-git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+# git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+# git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # 添加SmartDNS
 # git clone https://github.com/pymumu/openwrt-smartdns.git feeds/packages/net/smartdns
