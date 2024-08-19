@@ -1,0 +1,40 @@
+name: Image Build ImmortalWrt
+on: 
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Installation depends
+      run: |
+        sudo apt install build-essential libncurses-dev zlib1g-dev gawk git gettext libssl-dev xsltproc rsync wget unzip python3 python3-distutils
+    - name: Clone source code
+      run: |
+        wget https://downloads.immortalwrt.org/releases/23.05.2/targets/x86/64/immortalwrt-imagebuilder-23.05.2-x86-64.Linux-x86_64.tar.xz
+        #wget https://downloads.immortalwrt.org/releases/21.02.7/targets/x86/64/immortalwrt-imagebuilder-21.02.7-x86-64.Linux-x86_64.tar.xz
+        tar -J -x -f immortalwrt-imagebuilder-*.tar.xz
+        
+    - name: Build 
+      run: |
+        cd immortalwrt-imagebuilder-*64/
+        #下面的命令是不生成iso、qcow2、vdi、vmdk、vhdx后缀类型的固件
+        sed -i 's/CONFIG_ISO_IMAGES=y/#CONFIG_ISO_IMAGES is not set/' .config   
+        sed -i 's/CONFIG_QCOW2_IMAGES=y/#CONFIG_QCOW2_IMAGES is not set/' .config
+        sed -i 's/CONFIG_VDI_IMAGES=y/#CONFIG_VDI_IMAGES is not set/' .config
+        #sed -i 's/CONFIG_VMDK_IMAGES=y/#CONFIG_VMDK_IMAGES is not set/' .config
+        sed -i 's/CONFIG_VHDX_IMAGES=y/#CONFIG_VHDX_IMAGES is not set/' .config
+        #"luci-i18n-base-zh-cn"这样是添加插件，"-luci-i18n-base-zh-cn"这样是删除插件。ROOTFS_PARTSIZE="800"这表示overlay（不严谨，供小白理解）分区容量是800MB
+        make image PACKAGES="luci-app-smartdns luci-i18n-smartdns-zh-cn luci-app-passwall luci-i18n-passwall-zh-cn luci-app-upnp luci-i18n-upnp-zh-cn luci-app-vlmcsd luci-i18n-vlmcsd-zh-cn luci luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn" TARGET_KERNEL_PARTSIZ="512" TARGET_ROOTFS_PARTSIZE="2048"
+
+    - name: Filter and upload firmware
+      run: |
+        mkdir immortalwrt-firmware
+        #squashfs-combined带efi：squashfs-combined-efi.img.gz；squashfs-combined不带efi：squashfs-combined.img.gz 替换到双引号内。
+        find immortalwrt-imagebuilder-*64/bin/targets/ -type f -name "*squashfs-combined.img.gz" -exec cp {} immortalwrt-firmware/ \;
+      working-directory: ${{ github.workspace }}
+  
+    - name: Upload immortalwrt firmware
+      uses: actions/upload-artifact@master
+      with:
+        name: immortalwrt-firmware
+        path: immortalwrt-firmware/
