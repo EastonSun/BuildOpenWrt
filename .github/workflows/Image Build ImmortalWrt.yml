@@ -24,7 +24,7 @@ jobs:
         #sed -i 's/CONFIG_VMDK_IMAGES=y/#CONFIG_VMDK_IMAGES is not set/' .config
         sed -i 's/CONFIG_VHDX_IMAGES=y/#CONFIG_VHDX_IMAGES is not set/' .config
         #"luci-i18n-base-zh-cn"这样是添加插件，"-luci-i18n-base-zh-cn"这样是删除插件。ROOTFS_PARTSIZE="800"这表示overlay（不严谨，供小白理解）分区容量是800MB
-        make image PROFILE="generic" PACKAGES="luci-app-smartdns luci-i18n-smartdns-zh-cn luci-app-passwall luci-i18n-passwall-zh-cn luci-app-upnp luci-i18n-upnp-zh-cn luci-app-vlmcsd luci-i18n-vlmcsd-zh-cn luci luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn" TARGET_ROOTFS_PARTSIZE="2048"
+        make image PROFILE="generic" PACKAGES="luci-app-smartdns luci-i18n-smartdns-zh-cn luci-app-passwall luci-i18n-passwall-zh-cn luci-app-upnp luci-i18n-upnp-zh-cn luci-app-vlmcsd luci-i18n-vlmcsd-zh-cn luci luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn" ROOTFS_PARTSIZE="2048"
 
     - name: Filter and upload firmware
       run: |
